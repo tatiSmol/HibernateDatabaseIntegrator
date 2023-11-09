@@ -2,6 +2,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -10,14 +12,17 @@ public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int a_id;
+    private int id;
 
     @Column(name = "name", nullable = false)
-    private String b_name;
+    private String name;
 
     @Column(name = "salary")
-    private int c_salary;
+    private int salary;
 
     @Column(name = "age")
-    private int d_age;
+    private int age;
+
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
+    private List<Course> courses;
 }
