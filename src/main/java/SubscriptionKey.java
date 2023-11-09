@@ -10,7 +10,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class SubscriptionKey implements Serializable {
     @Column(name = "student_id", nullable = false, insertable = false, updatable = false)
-    private int a_studentId;
+    private int studentId;
     @Column(name = "course_id", nullable = false, insertable = false, updatable = false)
-    private int b_courseId;
+    private int courseId;
 }

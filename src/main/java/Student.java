@@ -3,6 +3,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -12,14 +13,20 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int a_id;
+    private int id;
 
     @Column(name = "name", nullable = false)
-    private String b_name;
+    private String name;
 
     @Column(name = "age")
-    private int c_age;
+    private int age;
 
     @Column(name = "registration_date", nullable = false)
     private Date registrationDate;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "subscriptions",
+            joinColumns = {@JoinColumn(name = "student_id")},
+            inverseJoinColumns = {@JoinColumn(name = "course_id")})
+    private List<Course> courses;
 }
