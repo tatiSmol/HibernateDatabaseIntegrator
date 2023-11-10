@@ -18,7 +18,7 @@ public class Course {
     @Column(name = "duration")
     private int duration;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false, columnDefinition = "enum('DESIGN','PROGRAMMING','MARKETING','MANAGEMENT','BUSINESS')")
     private CourseType type;
 
