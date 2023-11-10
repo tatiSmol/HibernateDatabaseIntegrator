@@ -10,8 +10,8 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class PurchaseKey implements Serializable {
     @Column(name = "student_name", insertable = false, updatable = false)
-    private String a_studentName;
+    private String studentName;
 
     @Column(name = "course_name", insertable = false, updatable = false)
-    private String b_courseName;
+    private String courseName;
 }

@@ -13,10 +13,10 @@ import java.util.Date;
 @Table(name = "purchaseList")
 public class Purchase {
     @EmbeddedId
-    private PurchaseKey a_purKey;
+    private PurchaseKey purKey;
 
     @Column(name = "price")
-    private int b_price;
+    private int price;
 
     @Column(name = "subscription_date")
     private Date subscriptionDate;
