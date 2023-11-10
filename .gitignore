@@ -10,6 +10,7 @@ target/
 .idea/encodings.xml
 .idea/jpa-buddy.xml
 .idea/workspace.xml
+.idea/uiDesigner.xml
 .idea/libraries/
 *.iws
 *.iml
